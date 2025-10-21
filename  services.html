@@ -1,0 +1,2259 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع فريق سُفراء التميُّز والعطاء العالمي </title>
+  
+    <link rel="icon" href="img/favicon.png">
+  
+    <style>
+    /* التنسيقات الأساسية المطابقة للنماذج السابقة */
+    body { 
+      font-family: 'Tahoma', sans-serif; 
+      /* خلفية متدرجة مطابقة للنموذج الأول والثاني */
+      background: linear-gradient(to right, #003973, #E5E5BE); 
+      margin: 0; 
+      padding: 0; 
+      color: #fff; /* لون النص الأساسي أبيض */
+      line-height: 1.8;
+      direction: rtl; 
+    }
+       
+    /* تنسيق رأس الصفحة (Header) */
+    header { 
+      text-align: right; 
+      padding: 20px; 
+      background: rgba(0, 0, 0, 0.1); /* خلفية شفافة مطابقة */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    header h1 { 
+      margin: 0; 
+      font-size: 28px; 
+      color: #FFD700; /* لون ذهبي مميز */
+    }
+
+    /* تنسيق شريط التنقل (Nav) */
+   nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: right;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+    /* تنسيق الأقسام الرئيسية (Section) - كحاوية المحتوى */
+    section {
+      max-width: 900px; 
+      margin: 20px auto; 
+      background: rgba(0, 0, 0, 0.1); /* خلفية شفافة مطابقة */
+      padding: 20px; 
+      border-radius: 12px; 
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+    
+    /* تنسيق العناوين (H2) */
+    h2 { 
+      color: #FFD700; /* لون ذهبي مطابِق */
+      border-bottom: 2px solid #FFD700; /* خط سفلي ذهبي مطابِق */
+      padding-bottom: 5px; 
+      margin-top: 30px;
+      display: block;
+    }
+    h3 {
+        color: #FFD700;
+    }
+
+    /* تنسيق القوائم غير المرتبة (UL) */
+    ul { 
+      margin: 10px 0; 
+      padding: 0 20px; 
+      list-style: none; /* إزالة النقاط الافتراضية */
+    }
+    
+    /* إضافة أيقونة للقوائم (Li) */
+    ul li { 
+      margin-bottom: 12px;
+      padding-right: 25px; 
+      position: relative;
+    }
+    
+    /* إنشاء أيقونة نقطية مخصصة مطابقة */
+    ul li::before {
+      content: "✅"; 
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 16px;
+    }
+
+    /* تنسيق الأزرار وروابط الدعوة للعمل (CTA) */
+    .cta-btn, button, .highlight-links a {
+      display: block; 
+      width: 80%; 
+      max-width: 380px;
+      padding: 12px 15px; 
+      margin: 15px auto; /* توسيط */
+      border-radius: 8px; 
+      background: #25D366; /* لون واتساب أخضر مميز */
+      color: #fff; 
+      font-weight: bold; 
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s ease; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+    
+    .cta-btn:hover, button:hover, .highlight-links a:hover { 
+      background: #128C7E;
+    }
+
+    /* تنسيق الروابط العادية داخل المحتوى */
+    p a {
+        color: #E5E5BE;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    
+    /* تنسيق صندوق الفورم (Form Container) */
+    .form-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 12px;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 450px;
+      margin: 20px auto;
+    }
+    .form-container label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .form-container input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: #fff;
+      color: #333;
+    }
+    .form-container button {
+        max-width: none;
+        width: 100%;
+    }
+
+    /* تنسيق Details/Summary المطابق للنماذج */
+    details summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #FFD700;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(0, 0, 0, 0.3)
+      border-radius: 8px;
+      margin: 10px 0;
+      list-style: none;
+      transition: background 0.3s;
+    }
+    details summary:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    details summary::before {
+      content: "➕ ";
+      font-size: 16px;
+      color: #25D366; /* أيقونة خضراء */
+      margin-left: 10px;
+    }
+    details[open] summary::before {
+      content: "➖ ";
+      color: #FFD700; /* أيقونة ذهبية */
+    }
+    details > *:not(summary) {
+      padding-right: 20px;
+      margin-top: 10px;
+    }
+    
+    .alert-box h4 {
+            color: #dc3545;
+            border-bottom: 2px solid #dc3545;
+            padding-bottom: 10px;
+            margin-top: 0;
+            text-align: center;
+        }
+        .alert-box p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #007bff; /* لون مميز لإبراز العدد */
+            font-size: 1.2em;
+        }
+    /* تنسيق تذييل الصفحة (Footer) */
+    footer { 
+      text-align: center; 
+      padding: 15px; 
+      margin-top: 30px; 
+      color: #fff; 
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* تنسيقات إضافية للتنظيف */
+    .center {
+        text-align: center;
+    }
+    .icon-img { 
+        font-size: 30px; 
+        margin-left: 10px;
+    }
+    /* إلغاء تنسيق span الأحمر القديم */
+    p span {
+        color: inherit !important;
+        font-weight: normal;
+    }
+    .highlight-links a:last-child {
+        background: #003973;
+    }
+    
+    @media (max-width: 600px) {
+        section {
+            margin: 10px;
+            padding: 15px;
+        }
+        .cta-btn, button, .highlight-links a {
+            width: 95%;
+        }
+    }
+  </style>
+</head>
+  <body>
+  <header>
+  <img src="img/123.webp.jpg" width="100%" />
+   <a href="index.html"> الرجوع إلى الصفحة الرئيسية</a>
+    
+      <nav>
+    
+        <div class="container">
+        <class="sidebar">
+           
+            <h3>انتقال سريع للفئات</h3>
+   <a href="#supplements">المكملات الغذائية والصحية</a>
+   <br>
+  <a href="#food-beverages">الأغذية والمشروبات الصحية</a>
+         <br>       
+   <a href="#personal-care">منتجات العناية الشخصية</a>
+    <br>
+ <a href="#skincare">منتجات العناية بالبشرة والتجميل</a>
+  <br>
+  <a href="#home-care">منتجات العناية المنزلية</a>
+          </aside> 
+        
+         </nav>  
+
+        <main class="main-content">
+            
+            <section id="supplements" class="product-section">
+                <h2>المكملات الغذائية والصحية</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                         <img src="img/RGLP70_ReishiMushroomPowder70g.jpg" width="100%" />
+                        <h4>مجموعة فطر الريشي (RG & GL)</h4>
+<details>
+    <summary>عرض التفاصيل الكاملة للفطر الريشي</summary>
+    
+   <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+       <h3>ما هو الفطر الريشي؟</h3>
+        <p>الفطر الريشي، المعروف علمياً باسم <span class="key-term">جانوديرما لوسيدوم (Ganoderma Lucidum)</span>، هو نوع من الفطريات كان يُستخدم في الطب الصيني التقليدي لأكثر من 2000 عام، ويُطلق عليه لقب "ملك الأعشاب" أو "فطر الخلود" نظراً لخصائصه الصحية المتعددة. تقدمه شركة DXN عادة في شكل مسحوق أو كبسولات.</p>
+
+        <h3>المكونات والخصائص الرئيسية</h3>
+        <p>يحتوي الفطر الريشي على مجموعة من المركبات النشطة التي تُعزى إليها فوائده، منها:</p>
+        <ul>
+            <li><span class="key-term">البوليساكاريدات (Polysaccharides):</span> مركبات معقدة تلعب دوراً هاماً في دعم وتعزيز الجهاز المناعي.</li>
+            <li><span class="key-term">الترايتيربينات (Triterpenes):</span> وهي المسؤولة عن المذاق المر للفطر ولها خصائص مساعدة في تنظيم وظائف الجسم المختلفة، مثل ضغط الدم والكوليسترول.</li>
+            <li>الفيتامينات والمعادن.</li>
+            <li>مضادات الأكسدة.</li>
+        </ul>
+
+        <h3>أهم الفوائد الصحية للفطر الريشي (جانوديرما)</h3>
+        <p>يُروّج لمنتجات الفطر الريشي من DXN لتقديمها مجموعة واسعة من الفوائد لدعم الصحة العامة، وأبرزها:</p>
+        <ul>
+            <li><strong>تعزيز وتقوية الجهاز المناعي:</strong> يعتبر الفطر الريشي مُعدِّلاً مناعياً، حيث يساعد على تفعيل خلايا الدم البيضاء (مثل الخلايا القاتلة الطبيعية) لدعم قدرة الجسم على مكافحة الالتهابات والأمراض.</li>
+            <li><strong>التخلص من السموم (التنقية):</strong> يساعد على تنقية الجسم وإزالة السموم المتراكمة وتحسين وظائف الكبد.</li>
+            <li><strong>مكافحة الأكسدة ومقاومة الشيخوخة:</strong> غني بمضادات الأكسدة التي تحارب الجذور الحرة، مما يساعد في تأخير علامات الشيخوخة وتجديد خلايا البشرة.</li>
+            <li><strong>تحسين الدورة الدموية وصحة القلب:</strong> يساهم في خفض مستويات الكوليسترول الضار والدهون الثلاثية، ويساعد في تنظيم ضغط الدم، مما يدعم صحة القلب والأوعية الدموية.</li>
+            <li><strong>دعم الجهاز العصبي:</strong> يساهم في تقليل التوتر والقلق والتعب المزمن، ويحسن من جودة النوم.</li>
+            <li><strong>تنظيم مستويات السكر في الدم:</strong> قد يساعد في تحسين حساسية الأنسولين وضبط مستويات السكر.</li>
+        </ul>
+
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20الفطر الريشي،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+           </div>
+           
+                    <br>
+                    <hr>
+                    <br>
+                    
+      <div class="product-card">
+                    <img src="img/SPI120_Spirulina120.jpg" width="100%" />
+                          
+                        <h4>طحالب سبيرولينا</h4>
+                    <details>
+    <summary>عرض التفاصيل الكاملة لطحالب  اسبيرولينا</summary>
+    
+   <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+
+        <p> سبایرولینا دي اكس ان
+مكون من طحالب سبيرولينا، كغذاء معروف كغذاء بينما ذو ألياف عالية الجودة ومسحوق/حبوب سبيرولينا يوفر واحدًا من أفضل مصدر للتغذية.
+
+الحجم: 250 مل جرام × 120 قطعة</p>
+        
+        <h3>الفوائد:</h3>
+        <ul>
+            <li>تنظف الجسم من السموم.</li>
+            <li>تحسن التركيز والبصر والبشرة.</li>
+            <li>غنية بالبروتينات والفيتامينات والمعادن</li>
+            <li>تدعم القلب والكبد.</li>
+            <li>تحافظ على توازن الجسم العام</li>
+            
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20اسبيرولينا،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>                  
+            </div>
+                    
+                    <br>
+                    <hr>
+                    <br>
+                    
+                    <div class="product-card">
+                        <div>
+                         <img src="img/CORDY_Cordyceps120.jpg" width="100%" />
+                        <h4>فطر كورديسبس</h4>
+                       
+                        <details>
+    <summary>عرض التفاصيل الكاملة لفطر كورديسيبس</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>كورديسيبس هو فطر طبيعي نادر يُستخدم لدعم الجهاز التنفسي والأداء البدني.</p>
+        
+        <h3>الفوائد:</h3>
+        <ul>
+            <li>يرفع الطاقة والقدرة على التحمل.</li>
+            <li>يقوي الرئتين ويحسن التنفس..</li>
+            <li>يقوي المناعة ضد الأمراض..</li>
+            <li>يساعد في تنشيط الدورة الدموية</li>
+            <li>يدعم الكبد والكلى.</li>
+            <li>يقلل الإرهاق الجسدي والذهني.</li>
+            <li>مفيد للرجال والنساء في تعزيز النشاط العام.</li>
+        </ul>    
+              
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">كود موزع DXN الخاص بك او كود الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20كورديسيبس،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+      
+    
+</div> 
+
+   <br>
+   <hr>
+   <br>
+
+<img src="img/LION_LionMane120.jpg" width="100%" /> 
+                        <h4>فطر عرف الأسد</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لفطر عرف الأسد</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        
+        <h4>2. فطر عرف الأسد من DXN (Lion's Mane Mushroom)</h4>
+        <p><strong>الوصف:</strong></p>
+        <p>فطر عرف الأسد (Hericium erinaceus) هو فطر طبي ذو شكل مميز يشبه لبدة الأسد، يُستخدم كـ <span class="key-feature">مكمل غذائي لدعم الجهاز العصبي والدماغ</span>، وهو غني بالمواد الغذائية الأساسية.</p>
+        <p><strong>أبرز الفوائد الصحية (وفقاً للبحوث والترويج):</strong></p>
+        <ul>
+            <li><strong>دعم وظائف الدماغ والأعصاب:</strong> يُعرف بأنه <span class="key-feature">"غذاء الدماغ"</span>، حيث يحفز إنتاج عامل نمو الأعصاب (NGF)، مما يساعد في تحسين الذاكرة، التركيز، والوظائف الإدراكية.</li>
+            <li><strong>تحسين المزاج:</strong> قد يساعد في تخفيف أعراض القلق والاكتئاب من خلال دعم صحة الجهاز العصبي.</li>
+            <li><strong>دعم صحة الجهاز الهضمي:</strong> يساهم في حماية بطانة المعدة والأمعاء، وله دور في تحسين عملية الهضم وتخفيف الالتهابات المعوية.</li>
+            <li><strong>تقوية المناعة:</strong> يحتوي على السكريات المتعددة ومضادات الأكسدة التي تعزز قدرة الجهاز المناعي على مقاومة الأمراض.</li>
+            <li><strong>تنظيم السكر والدهون:</strong> له تأثيرات إيجابية في تنظيم مستويات السكر والدهون في الدم.</li>
+        </ul>
+    </div>
+
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 فطر عرف الأسد،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+</div>
+          <br>
+            <hr>
+          <br>
+          
+          
+
+<div>  
+<img src="img/MYCO_Mycoveggie.jpg" width="100%" /> 
+                        <h4>منتج الميكوفيجي</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لمنتج الميكوفيجي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        
+        <p><strong>المكونات:</strong> مزيج من الخضروات والفطريات المغذية.</p>
+        
+        <h3>الفوائد:</h3>
+        <ul>
+            <li>ينقي القولون ويساعد على الهضم.</li>
+            <li>مصدر غني بالألياف والمعادن.</li>
+            <li>يدعم المناعة وصحة الأمعاء.</li>
+            <li>يعوض نقص الخضار في النظام الغذائي.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 ميكوفيجي،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+     </div>
+          <br>
+            <hr>
+          <br>
+                    <div>  
+<img src="img/HF044_Potenzhi90.jpg" width="100%" /> 
+                        <h4>منتج البوتنزي</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لمنتج البوتنزي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>يحتوي على خلاصة سبعة اعشاب فعالة(جانوديرما - كوردسيبس - الفلفل الاسود -الكرفس -الشاي الأخضر - جذر لالانج كايو سيكانج) هذه الاعشاب معروفة من قديم الزمان بفاعليتها في النشاط الحيوي في الجسم بشكل شامل.</p>
+        
+        
+        <h3>الفوائد:</h3>
+        <ul>
+            <li>يقلل الإرهاق الجسدي والذهني.</li>
+            <li>منشط طبيعي للطاقة والحيوية.</li>
+            <li>يقوي القدرة الجنسية لدى الرجال.</li>
+            <li>يدعم الأداء البدني والعقلي</li>
+            <li>يساعد في تنشيط الدورة الدموية.</li>
+            <li>يحتوي على أعشاب آسيوية نادرة تعزز القوة.</li>
+            <li>يوازن الهرمونات ويزيد النشاط.</li>
+           
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 بوتنزي،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>   
+          <br>
+            <hr>
+          <br>
+          
+          <img src="img/Adroo G.jpg" width="100%" /> 
+                        <h4>الأندروجي (Andro-G)</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لعشبة الأندروجي (Andro-G)</summary>
+    
+   <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>يحتوي على عشبة الأندروغرافيس المعروفة بدعم الكبد.</p>
+       
+        
+        <h3>الفوائد:</h3>
+        <ul>
+            <li>يساعد في مقاومة الالتهابات والفيروسات.</li>
+            <li>ينقي الدم من السموم.</li>
+            <li>يقوي جهاز المناعة.</li>
+            <li>مفيد للهضم وصحة الجهاز التنفسي.</li>
+        </ul>
+     
+       <p> <strong>لطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع..." style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 عشبة الأندروجي (Andro-G)،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+            </div> 
+                    <br>
+                      <hr>
+                    <br>
+          <div>  
+<img src="img/HF082_BeePollenGranule40g.jpg" width="100%" /> 
+                        <h4>منتج حبيبات لقاح النحل</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لمنتج حبوب لقاح النحل</summary>
+    
+   <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>غذاء متكامل يحتوي على الفيتامينات والأحماض الأمينية.</p>
+       
+        
+           
+        <h3>الفوائد:</h3>
+        <ul>
+            <li>يمنح طاقة طبيعية للجسم.</li>
+            <li>يقوي المناعة ويحسن المزاج.</li>
+            <li>يساعد في تنظيم الهرمونات ودعم الخصوبة.</li>
+            <li>يحسن البشرة والشعر.</li>
+            <li>يرفع التركيز ويقلل الإرهاق.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 حبوب لقاح النحل،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                  </div>           
+            </section>
+            
+             <br>
+               <hr>
+               <hr>
+            <br>
+            
+            
+            <section id="food-beverages" class="product-section">
+                <h2>الأغذية والمشروبات الصحية</h2>
+               
+          <div >
+                         <img src="img/LBC_LingzhiBlackCoffee.jpg" width="100%" /> 
+                        <h4>قهوة لينجزي السوداء 1في2</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لقهوة لينجزي السوداء</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>قهوة سريعة التحضير تجمع بين المذاق الغني والداكن لـ<strong>القهوة النقية</strong> ذات الجودة العالية و<strong>خلاصة فطر الجانوديرما (الريشي)</strong>. تتميز بكونها <strong>خالية من السكر</strong> والمبيضات، مما يجعلها الخيار المثالي لعشاق القهوة السوداء والباحثين عن خيار صحي منخفض السعرات الحرارية. </p>
+        <h3>الفوائد (بفضل القهوة وفطر الجانوديرما):</h3>
+        <ul>
+            <li class="benefits-list"><strong>تعزيز الطاقة والتركيز:</strong> تمنح دفعة من النشاط والحيوية لتحسين الأداء الذهني والبدني.</li>
+            <li class="benefits-list"><strong>دعم الجهاز المناعي:</strong> يساعد فطر الجانوديرما على تقوية وتعزيز وظائف الجهاز المناعي.</li>
+            <li class="benefits-list"><strong>تنظيم مستويات السكر:</strong> لكونها خالية من السكر، فهي مناسبة لمرضى السكري ومتبعي الحميات الغذائية.</li>
+            <li class="benefits-list"><strong>المساعدة في إنقاص الوزن:</strong> قد تساهم في زيادة معدل الأيض (حرق الدهون) وتحسين الهضم.</li>
+            <li class="benefits-list"><strong>مضادات الأكسدة:</strong> غنية بالمركبات المضادة للأكسدة لدعم الصحة العامة وإزالة السموم.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20لينجزي 1قي 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+           </div >        
+          
+          <br>
+          <hr>
+          <br>
+          
+           <div>
+                         <img src="img/LC20_LingzhiCoffee3in1.jpg" width="100%" /> 
+                        <h4>قهوة لينجزي السوداء 1في3</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لقهوة لينجزي السوداء 1في3</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+       <p>
+        قهوة لينجزي من DXN هي مزيج قهوة سريعة التحضير يحتوي على مستخلص فطر اللينغزي المعروف تقليدياً في الطب الشرقي.
+        تم تصميم المنتج ليوفر تجربة قهوة يومية مع بعض المزايا التي تُنسب إلى مكونات الفطر، مع الحفاظ على طعم قهوة مهدئ ومعتدل.
+      </p>
+ 
+      <h3 id="benefits">الفوائد:</h3>
+      <ul class="benefits">
+        <li><strong>مصدر للطاقة والتركيز:</strong> تمنحك القهوة دفعة من اليقظة والطاقة مع نكهة مريحة.</li>
+        <li><strong>دعم مضادات الأكسدة:</strong> تحتوي القهوة والفطر على مركبات مضادة للأكسدة قد تساعد في حماية الخلايا.</li>
+        <li><strong>دعم جهاز المناعة:</strong> يُعتقد أن مستخلص اللينغزي يساهم في تعزيز استجابة الجهاز المناعي لدى بعض الأشخاص.</li>
+        <li><strong>توازن الجهاز العصبي:</strong> قد يساعد مزيج المكونات على الشعور بالهدوء وتقليل التعب الذهني عند البعض.</li>
+        <li><strong>تحسين الحيوية العامة:</strong> يبلّغ بعض المستخدمين عن شعور بتحسن النشاط العام عند الاستهلاك المنتظم.</li>
+        <li><strong>دعم الهضم:</strong> توازن مكونات القهوة والفطر قد يكون لطيفاً على المعدة مقارنةً ببعض أنواع القهوة القوية.</li>
+        <li><strong>مساعدة على النوم المتوازن (بجرعات معتدلة):</strong> بالرغم من احتواء القهوة على الكافيين، يمكن أن يساهم مستخلص اللينغزي في تلطيف التأثير لدى بعض الأشخاص.</li>
+        <li><strong>مظهر وصحة البشرة:</strong> مضادات الأكسدة قد تدعم صحة الجلد عند اتباع نظام غذائي ونمط حياة مناسبين.</li>
+      </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a 
+    href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20قهوة لينجزي 1في3 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+           <br>
+           <hr>
+           <br>
+          
+                    <div class="product-card">
+                         <img src="img/FB371_Ootea_Lingzhi_Coffee_Mix_2in1.jpg" width="100%" /> 
+                        <h4>اوتي قهوة لينجزي ميكس 1في2</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـ اوتي قهوة لينجزي ميكس 1في2</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>تحتوي على خلاصة الجانوديرما (لينجزي).</p>
+             
+        <h3>الفوائد الصحية الرئيسية</h3>
+   <ul>
+       <li>تحسن صحة القلب والكبد.</li>
+       <li>تعزز المناعة وتحارب التعب.</li>
+       <li>تمنح طاقة ونشاط مستمر طوال اليوم.</li>
+       <li>مناسبة للاستخدام اليومي.</li>
+                </ul>
+                
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 اوتي قهوة لينجزي ميكس 1في2  2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          
+          <br>
+          <hr>
+           <br>
+          
+          <div class="product-grid">
+                    <div class="product-card">
+                         <img src="img/FB066_LingzhiCoffee3in1Lite.jpg" width="100%" /> 
+                        <h4> قهوة لينجزي بالكريمة 2في1</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـقهوة لينجزي بالكريمة 1في2</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+     <p>نسخة كريمية من مزيج قهوة لينجزي، تحتوي على كريمة أو خليط كريمي جاهز يُضفي قواماً ناعماً وطعماً مخملياً.</p>
+          <h3>الفوائد:</h3>
+          <ul class="benefits">
+            <li>قوام كريمي يُرضي من يفضلون القهوة المخملية.</li>
+            <li>أسهل في التحضير لمن يفضلون القهوة الجاهزة بالحليب/القشدة.</li>
+            <li>قد تكون ألطف على المعدة لبعض الأشخاص مقارنة بالقهوة السوداء.</li>
+          </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 قهوة لينجزي بالكريمة 2في12،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+        
+          <br>
+          <hr>
+          <br>
+          
+          <div class="product-grid">
+                         <img src="img/FB130_CreamCoffee.jpg" width="100%" /> 
+                        <h4> قهوة بالكريمة </h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـقهوة  بالكريمة </summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+    <p>تعني عادةً أي قهوة جاهزة تُقدّم مع مكوّن كريمي أو مزيج كريمي (قد تكون بنكهة أو كلاسيكية). تختلف عن "لينجزي" عندما لا تحتوي على مستخلص الفطر.</p>
+          <h3>الفوائد:</h3>
+          <ul class="benefits">
+            <li>مذاق غني ومريح يناسب فترات الاسترخاء.</li>
+            <li>تحضير سريع وسهل، مناسب للسفر والعمل.</li>
+            <li>قد يكون خياراً لمن يفضلون قهوة أقل مرارة.</li>
+          </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 قهوة بالكريمة 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+        
+                   <br> 
+                    <hr>
+                    <br>
+           
+          <div class="product-grid">
+                    
+                         <img src="img/FB129_CordycepsCoffee3in1.jpg" width="100%" /> 
+                        <h4> قهوة كوردسيبس</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـقهوة كوردسيبس</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+         <p>قهوة فريدة تحتوي على مزيج من <strong>القهوة الفورية</strong> عالية الجودة و<strong>خلاصة فطر الكورديسيبس (Cordyceps)</strong>، بالإضافة إلى <strong>الكريمة غير المشتقة من الألبان</strong> و<strong>السكر</strong>. تشتهر بكونها مشروبًا معززًا للطاقة والقوة البدنية. </p>
+        <p><strong>الفوائد (بفضل القهوة وفطر الكورديسيبس):</strong></p>
+        <ul>
+            <li class="benefits-list"><strong>زيادة القدرة على التحمل:</strong> يُعرف فطر الكورديسيبس بفوائده في دعم الجهاز التنفسي وزيادة استهلاك الأكسجين، مما يعزز القدرة على التحمل والأداء الرياضي.</li>
+            <li class="benefits-list"><strong>معزز طبيعي للطاقة:</strong> يساهم في تقليل الإرهاق وتحسين مستويات الطاقة والحيوية.</li>
+            <li class="benefits-list"><strong>دعم وظائف الكلى والرئتين:</strong> تقليديًا، يُستخدم الكورديسيبس لدعم صحة الجهاز التنفسي والوظائف الكلوية.</li>
+            <li class="benefits-list"><strong>دعم الدورة الدموية:</strong> قد يساعد في تحسين تدفق الدم إلى أجزاء الجسم المختلفة.</li>
+            <li class="benefits-list"><strong>مقوٍّ عام للجسم:</strong> يُعتبر منشطًا ومقويًا عامًا للجسم، ومفيدًا لتعزيز جهاز المناعة.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 قهوة كوردسيبس 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+        
+          <br>
+          <hr>
+          <br>
+               <div class="product-grid">
+                    <div class="product-card">
+                         <img src="img/FB377_Ootea_EuCafe_Mix.jpg" width="100%" /> 
+                        <h4>قهوة اوتي يو كافي ميكس</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـقهوة اوتي يو كافي ميكس</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>مزيج قهوة يجمع بين <strong>حبوب البن عالية الجودة</strong> و<strong>مسحوق شاي أولونغ (Oolong Tea)</strong> الفاخر، معزز بـ<strong>خلاصة فطر الجانوديرما</strong> و<strong>تونغكات علي</strong>. يوفر مشروباً بنكهة فريدة ومختلفة مع فوائد تنشيطية.</p>
+        <p><strong>الفوائد:</strong></p>
+        <ul>
+            <li class="benefits-list"><strong>منشط ومُنعش:</strong> يضمن الشعور بالانتعاش واليقظة طوال اليوم.</li>
+            <li class="benefits-list"><strong>مزيج فريد من القهوة والشاي:</strong> يجمع بين خصائص القهوة المنشطة وفوائد شاي الأولونغ الغني بمضادات الأكسدة.</li>
+            <li class="benefits-list"><strong>دعم الصحة العامة:</strong> يساعد الجانوديرما وتونغكات علي في دعم حيوية الجسم.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 قهوة اوتي يو كافي ميكس2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+            <hr>
+          <br> 
+            
+          <div class="product-grid">
+                         <img src="img/FB376_Ootea_Vita_Cafe_Mix.jpg" width="100%" /> 
+                        <h4>قهوة اوتي فيتا كافي ميكس</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـقهوة اوتي فيتا كافي ميكس</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>مزيج قهوة 6 في 1 صحي فريد يجمع بين <strong>القهوة</strong>، <strong>الكريمة النباتية</strong>، <strong>السكر</strong>، و<strong>الجنكة (الجينسنغ)</strong>، <strong>تونغكات علي</strong>، و<strong>خلاصة فطر الجانوديرما</strong>. يعتبر مشروباً شاملاً معززاً للطاقة والقوة البدنية.</p>
+        <p><strong>الفوائد:</strong></p>
+        <ul>
+            <li class="benefits-list"><strong>تعزيز الطاقة والقوة البدنية:</strong> بفضل الجينسنغ وتونغكات علي، تُعرف بقدرتها على زيادة الحيوية والتحمل.</li>
+            <li class="benefits-list"><strong>تحسين الوضوح العقلي:</strong> تساعد على تحسين التركيز والوظائف الذهنية.</li>
+            <li class="benefits-list"><strong>دعم المناعة والصحة:</strong> خلاصة الجانوديرما تعمل على دعم الصحة العامة وتقوية جهاز المناعة.</li>
+        </ul>
+  
+
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 قهوة اوتي فيتا كافي ميكس2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+                    <br> 
+                    <hr>
+                    <br>
+                    
+          <div class="product-grid">
+                         <img src="img/FB375_Ootea_Lingzhi_Black_Coffee_Mix.jpg" width="100%" /> 
+                        <h4>قهوة اوتي مزيج قهوة لينجزي السوداء</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـقهوة اوتي مزيج قهوة لينجزي السوداء</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>قهوة سريعة التحضير تُركّب من حبوب قهوة مع مستخلص فطر اللينغزي (Reishi)، بنكهة سوداء نقية (بدون كريمة أو محليات مضافة).</p>
+          <h3>الفوائد: </h3>
+          <ul class="benefits">
+            <li>تمنح يقظة وتركيز دون الإضافات الدسمة.</li>
+            <li>مزيج القهوة واللينغزي قد يقدم مزيجاً من الكافيين والمركبات النباتية المفيدة.</li>
+            <li>خيار أفضل لمن يفضلون طعم القهوة القوي والنظيف.</li>
+          </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 قهوة اوتي مزيج قهوة لينجزي السوداء2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+          <hr> 
+          <br>
+            
+                    
+                        <div class="product-card">
+                        <img src="img/COCO_Cocozhi.jpg" width="100%" />
+                        <h4>مشروب كوكوزي (شوكولاتة)</h4>
+                       <details>
+    <summary>عرض التفاصيل الكاملة لطحالب  اسبيرولينا</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>مزيج مشروب شوكولاتة (كاكاو) لذيذ وصحي للأطفال والكبار. يتكون بشكل أساسي من <strong>مسحوق الكاكاو عالي الجودة</strong> مع <strong>خلاصة فطر الجانوديرما (الريشي)</strong> والفانيليا.</p>
+        <h3><strong>الفوائد:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>غني بمضادات الأكسدة:</strong> الكاكاو غني بمركبات الفلافونويد التي تدعم صحة القلب والشرايين.</li>
+            <li class="benefits-list"><strong>تعزيز الصحة الذهنية:</strong> يساهم في تحسين التركيز والوظائف المعرفية، ومفيد لنمو الأطفال.</li>
+            <li class="benefits-list"><strong>مقوي للمناعة:</strong> يوفر فوائد فطر الجانوديرما لتقوية الجهاز المناعي.</li>
+            <li class="benefits-list"><strong>تحسين المزاج:</strong> الكاكاو معروف بتأثيره الإيجابي على الحالة المزاجية.</li>
+        </ul>
+  
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20اسبيرولينا،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details> 
+                    </div>
+          <br>
+            <hr>
+          <br>
+           <div class="product-card">
+                         <img src="img/FB_IMG_1752045000634.jpg" width="100%" />
+                        <h4>شاي لينجزي  </h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـشاي لينجزي  </summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>شاي طبيعي نقي ذو رائحة لطيفة ومذاق استثنائي. يتكون من <strong>أوراق شجرة الشاي المختارة</strong> ومضاف إليه <strong>خلاصة مسحوق فطر الجانوديرما (الريشي)</strong>. يتميز بكونه منخفض أو يكاد يكون خالي من الكافيين.</p>
+        <h3><strong>الفوائد:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>إزالة السموم ودعم الكبد:</strong> يساعد في طرد السموم بفضل الجانوديرما.</li>
+            <li class="benefits-list"><strong>مضاد للأكسدة:</strong> غني بمضادات الأكسدة التي تحمي الخلايا وتكافح علامات التقدم في السن.</li>
+            <li class="benefits-list"><strong>ملائم لمن يعاني من حساسية الكافيين:</strong> انخفاض محتواه من الكافيين يجعله خياراً آمناً.</li>
+            <li class="benefits-list"><strong>تجديد النشاط:</strong> يمنح شعوراً بالانتعاش واليقظة الذهنية.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20شاي لينجزي ،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+          <hr>
+          <br>
+             
+                    <div class="product-card">
+                         <img src="img/FB301_LingzhiTeaLatte.jpg" width="100%" />
+                        <h4> شاي لينجزي لاتيه</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـشاي لينجزي  لاتيه</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>   
+         <p>مشروب شاي كريمي وسريع التحضير يجمع بين <strong>مسحوق الشاي النقي</strong>، <strong>الكريمة النباتية</strong>، و<strong>خلاصة فطر الجانوديرما</strong>. يوفر تجربة لاتيه لذيذة ودافئة مع فوائد الجانوديرما.
+         <br> حجم الرسالة: ١٢ كيس × ٣٠ جم</p>
+        <h3><strong>الفوائد:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>تعزيز المناعة والصحة:</strong> لكونه معززاً بالجانوديرما.</li>
+            <li class="benefits-list"><strong>مذاق كريمي ومميز:</strong> يوفر تجربة شاي لاتيه فاخرة وسهلة التحضير.</li>
+            <li class="benefits-list"><strong>طاقة مستدامة:</strong> يوفر دفعة طاقة معتدلة دون الشعور بالتوتر المصاحب للكافيين العالي.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20شاي لينجزي لاتيه،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+            <hr>
+          <br>
+         <div class="product-grid">
+                   
+                         <img src="img/FB155_Lemonzhi.jpg" width="100%" /> 
+                        <h4> شاي ليمونزي</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لشاي ليمونزي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>مشروب منعش يجمع بين النكهة الحيوية لـ<strong>الليمون</strong> ومسحوق <strong>الشاي</strong>، مع إضافة <strong>خلاصة فطر الجانوديرما</strong>. يمكن تقديمه ساخناً أو بارداً.</p>
+        <h3><strong>الفوائد:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>تنشيط الدماغ وزيادة التركيز:</strong> يساعد على تصفية الذهن وزيادة اليقظة.</li>
+            <li class="benefits-list"><strong>انتعاش وإرواء للعطش:</strong> مثالي كمشروب منعش في الأيام الحارة أو بعد المجهود.</li>
+            <li class="benefits-list"><strong>طرد السموم:</strong> يدعم وظائف الجسم في التخلص من السموم بفضل الجانوديرما.</li>
+            <li class="benefits-list"><strong>رفع مستوى الطاقة:</strong> يمنح الحيوية اللازمة لمواجهة التحديات اليومية.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 شاي ليمونزي2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+            <hr>
+          <br>  
+             
+             <div class="product-card">
+                         <img src="img/FB050_Vinaigrette700ml.jpg" width="100%" /> 
+                        <h4> عصير فيناقريتي(Vinaigrette700ml)</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لفيناقريتي دي اكس ان(Vinaigrette700ml)</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>مسمى قد يدل على عصير بنكهة مميزة أو مزيج فاكهي مع لمسة حمضية (التسمية قد تكون تجارية). يُستخدم عادةً كمشروب يخفف الشعور بالتعب ومنعش للصيف.</p>
+          <h3>الفوائد</h3>
+          <ul class="benefits">
+            <li>منعش ويساعد على الانتعاش السريع.</li>
+            <li>قد يحتوي على إنزيمات أو أحماض عضوية تساعد الهضم إذا كان يحتوي على مكوّنات حمضية طبيعية.</li>
+            <li>مناسب لتناول قبل الوجبات لتقليل الشعور بالثقل عند البعض.</li>
+          </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a 
+    href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20عصير فيناقريتي دي اكس ان2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>  
+          <br>
+          <hr>
+          <br>
+          
+          <div class="product-card">
+                         <img src="img/CORPIN_Cordypine285ml.jpg" width="100%" /> 
+                        <h4>منتج عصير الكورديباين</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لمنتج عصير المورنزي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>عصير مُصنّع من مزيج فواكه/مستخلصات نباتية (حسب تسمية المنتج). يُسوَّق عادةً كمشروب فعّال غني بالفيتامينات والمعادن ومضادات الأكسدة.</p>
+          <h3>الفوائد </h3>
+          <ul class="benefits">
+            <li>مصدر للفيتامينات (مثل فيتامين C) التي تدعم المناعة.</li>
+            <li>مضادات أكسدة قد تساهم في حماية الخلايا.</li>
+            <li>ترطيب سريع وسهل—مناسب كبديل صحي للمشروبات الغازية.</li>
+            <li>يمكن أن يساعد في استعادة الحيوية بعد التمارين الخفيفة.</li>
+          </ul>
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a 
+    href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20عصير الكورديباين 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+                    
+                    <br>
+                    <hr>
+                    <br>
+          
+           <div class="product-card">
+                         <img src="img/MOR_Morinzhi285mI.jpg" width="100%" /> 
+                        <h4>منتج عصير المورنزي(Morinzhi285mI)</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لمنتج عصير المورنزي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>مستخلص من فاكهة النوني الغنية بمضادات الأكسدة.</p>
+      
+        
+        <h3>الفوائد:</h3>
+        <ul>
+            <li>ينظم ضغط الدم والسكر.</li>
+            <li>يحسن الهضم ويقوي الكبد.</li>
+            <li>يخفف الالتهابات والآلام.</li>
+             <li>يدعم المزاج العام ويقلل التوتر.</li>
+              <li>يعزز المناعة الطبيعية للجسم</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a 
+    href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20عصير المورنزي 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+                    
+                    <br>
+                    <hr>
+                    <br>
+          
+          
+           <div class="product-card">
+         <img src="img/FB005_Roselle285m.jpg" width="100%" /> 
+                        <h4>عصير الروسيل (Roselle Juice) من DXN</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لمنتج عصير الروسيل</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+      
+       <p>عصير الروسيل (Roselle Juice) من DXN هو مشروب طبيعي مُحضر خصيصاً من مستخلص <span class="key-point">زهور نبات الكركديه</span> (Hibiscus sabdariffa)، وهو نبات استوائي معروف بخصائصه العلاجية والغذائية. يتميز بلونه الأحمر الزاهي وطعمه الحامض المنعش.</p>
+
+        <h3>المكونات الأساسية</h3>
+        <p>يُعد عصير الروسيل غنياً بالعناصر الغذائية الهامة، وأبرزها:</p>
+        <ul>
+            <li><span class="key-point">فيتامين C (حمض الأسكوربيك):</span> وهو مضاد أكسدة قوي يدعم جهاز المناعة.</li>
+            <li><span class="key-point">مضادات الأكسدة (الأنثوسيانين والفلافونويدات):</span> التي تساعد في مكافحة الجذور الحرة.</li>
+            <li>البيتا-كاروتين.</li>
+            <li>فيتامينات مجموعة B (B1، B2، B6).</li>
+            <li>بعض المعادن مثل الكالسيوم والحديد والمغنيسيوم.</li>
+        </ul>
+
+        <h3>أبرز الفوائد الصحية لعصير الروسيل (الكركديه)</h3>
+        <p>يشتهر عصير الروسيل بفوائده المتعددة، خاصة فيما يتعلق بـ <span class="key-point">صحة القلب والأوعية الدموية</span> والمناعة:</p>
+        <ul>
+            <li><strong>تنظيم ضغط الدم:</strong> يعد من أهم استخداماته، حيث يساعد في <span class="key-point">خفض ضغط الدم المرتفع</span> (خاصة عند تناوله بارداً)، ويعمل على توازن الدورة الدموية.</li>
+            <li><strong>دعم الجهاز المناعي:</strong> نسبة فيتامين C العالية تساعد في تقوية المناعة والوقاية من نزلات البرد والإنفلونزا.</li>
+            <li><strong>مضاد للأكسدة والشيخوخة:</strong> محتواه العالي من مضادات الأكسدة يحمي الخلايا من التلف، ويساهم في الحفاظ على نضارة البشرة.</li>
+            <li><strong>تحسين الهضم:</strong> يعمل كمليّن طبيعي ومهدئ لتقلصات المعدة والأمعاء، ويساعد في تنشيط الهضم والتقليل من الإمساك.</li>
+            <li><strong>خصائص مضادة للالتهابات والميكروبات:</strong> يحتوي على مواد مطهرة تساعد في القضاء على بعض الميكروبات، وتخفيف آلام النقرس والروماتيزم.</li>
+            <li><strong>مهدئ طبيعي:</strong> يساعد على تخفيف التقلصات العضلية، بما في ذلك تقلصات الرحم المرتبطة بالدورة الشهرية.</li>
+        </ul>
+
+        <div class="highlight">
+            <h3>طريقة الاستخدام المقترحة</h3>
+            <p>عادةً ما يُنصح بتخفيف كمية من العصير (مثلاً 50 مل) في كوب من الماء (حوالي 300 مل)، ويمكن شربه ساخناً أو بارداً حسب الرغبة. كما يمكن استخدامه كمنكّه لتحضير الحلويات أو المربيات.</p>
+               
+        
+            <h4>تنبيه هام حول ضغط الدم</h4>
+            <p>على الرغم من أن الكركديه يمكن أن يساعد في تنظيم الضغط، إلا أن تناوله بكثرة قد يزيد من انخفاض ضغط الدم لدى الأشخاص الذين يعانون أصلاً من الضغط المنخفض. يُفضل استشارة الطبيب في حالات الضغط المزمن أو استخدام أي مكملات غذائية خلال الحمل والرضاعة.</p>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a 
+    href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20عصير الروسيل 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+            <hr>
+          <br> 
+          <div class="product-grid">
+                    <div class="product-card">
+                         <img src="img/FB360_Sugar.jpg" width="100%" /> 
+                        <h4>منتج سكر dxn العضوي</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـمنتج سكر العضوي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>منتج طبيعي لتلبية الاحتياجات اليومية للطاقة.</p>      
+        <h3>الفوائد:</h3>
+        <ul>
+            <li>يمكن استخدامه مع المشروبات والأطعمة.</li>
+            <li>منتج عالي الجودة وخالٍ من المواد الضارة.</li>
+            <li>يوازن الطعم في الحلويات والمشروبات.</li>
+            <li>مناسب لجميع أفراد الأسرة.</li>
+          
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20منتج سكر dxn 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+          <hr>
+          <br> 
+          <div class="product-grid">
+                    
+                         <img src="img/FB173_Spirudle.jpg" width="100%" /> 
+                        <h4>منتج اسبايرودل</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـمنتج اسبايرودل</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+       <p>معكرونة فورية (نودلز) صحية ومبتكرة، يتم إعدادها باستخدام <strong>مسحوق الاسبيرولينا</strong> كمكون أساسي. تهدف إلى توفير وجبة سريعة ومغذية تجمع بين سهولة التحضير والفوائد الصحية للسبيرولينا.</p>
+        <h3><strong>الفوائد:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>وجبة سريعة ومغذية:</strong> تقدم بديلاً صحياً للمعكرونة الفورية التقليدية.</li>
+            <li class="benefits-list"><strong>غنية بالبروتين والألياف:</strong> تساهم في دعم صحة الجهاز الهضمي والشعور بالشبع.</li>
+            <li class="benefits-list"><strong>دعم الطاقة:</strong> تمد الجسم بالطاقة والحيوية المستمدة من السبيرولينا.</li>
+            <li class="benefits-list"><strong>تعزيز المناعة:</strong> تضفي فوائد السبيرولينا في تقوية الجهاز المناعي.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20منتج اسبايرودل 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+         <br>
+         <hr>
+         <br>
+         <div class="product-grid">
+                    <div class="product-card">
+                         <img src="img/FB032_SpirulinaCereal.jpg" width="100%" /> 
+                        <h4>منتج حبوب الاسبيرولينا </h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لمنتج حبوب الاسبيرولينا</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>مكمل غذائي يُعرف بـ "السوبر فود"، وهو عبارة عن طحالب خضراء مزرقة غنية بالعناصر الغذائية. تعتبر الاسبيرولينا من أغنى المصادر الطبيعية للبروتين (تحتوي على نسبة عالية جدًا)، الفيتامينات (خاصة فيتامين ب المركب)، والمعادن (مثل الحديد والكالسيوم)، والأحماض الأمينية، ومضادات الأكسدة.</p>
+        <h3><strong>الفوائد:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>غذاء متكامل:</strong> تعالج حالات سوء التغذية وتمد الجسم بمعظم احتياجاته الغذائية الأساسية.</li>
+            <li class="benefits-list"><strong>دعم المناعة ومكافحة الالتهابات:</strong> غنية بمضادات الأكسدة التي تقوي الجهاز المناعي وتحارب الجذور الحرة.</li>
+            <li class="benefits-list"><strong>مكافحة فقر الدم:</strong> مصدر ممتاز للحديد والكاروتين، مما يساعد في رفع مستويات الهيموجلوبين.</li>
+            <li class="benefits-list"><strong>التنقية وإزالة السموم:</strong> تساعد في تطهير الجسم من المعادن الثقيلة والسموم المتراكمة.</li>
+            <li class="benefits-list"><strong>دعم الرياضيين:</strong> تزيد من قوة العضلات والتحمل البدني بفضل محتواها العالي من البروتين.</li>
+            <li class="benefits-list"><strong>تحسين الهضم والوزن:</strong> تزيد الشعور بالشبع وتساهم في تحسين عملية الهضم والتمثيل الغذائي.</li>
+        </ul>
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20منتج حبوب الاسبيرولينا 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+          <hr>
+          <br> 
+          
+          <div class="product-grid">
+          <div class="product-card">
+             <img src="img/FB143_ZhiMintPlus.jpg" width="100%" /> 
+                        <h4>منتج حلوى زهي منت</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـمنتج حلوى زهي منت</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>حلوى نعناع منعشة (بدون سكر) مضاف إليها <strong>خلاصة فطر الجانوديرما (الريشي)</strong> و<strong>زيت النعناع</strong>. وهي مصممة لتقديم انتعاش فوري مع دعم صحي للحلق والجهاز التنفسي.</p>
+        <h3><strong>الفوائد:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>تهدئة الحلق والجهاز التنفسي:</strong> تساعد في التخفيف من جفاف الحلق، السعال، وإذابة البلغم.</li>
+            <li class="benefits-list"><strong>تعطير الفم:</strong> يمنح نفساً منعشاً بفضل زيت النعناع ويزيل الروائح الكريهة.</li>
+            <li class="benefits-list"><strong>تخفيف احتقان الجيوب الأنفية:</strong> يساعد النعناع في تخفيف أعراض الجيوب الأنفية والرشح.</li>
+            <li class="benefits-list"><strong>دعم المناعة:</strong> تحتوي على خلاصة الجانوديرما لتعزيز المناعة والصحة العامة.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20منتج حلوى زهي منت 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+            <hr>
+          <br> 
+          <div class="product-grid">
+                   
+                         <img src="img/FB033_GanoPineappleMix.jpg" width="100%" /> 
+                        <h4>مربى الأناناس المشكل من DXN (Mixed Pineapple Jam) </h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لـمنتج مربى الأناناس المشكل من DXN (Mixed Pineapple Jam)</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>مربى مصنوع من <strong>الأناناس الطبيعي الطازج</strong> والفواكه الأخرى (في النسخة المشكلة)، مضاف إليه <strong>فطر ميلسليوم (Mycelium)</strong> أو <strong>خلاصة الجانوديرما</strong> في بعض النسخ. يتميز بأنه خالٍ من المواد الحافظة والملونات الصناعية.</p>
+        <h3><strong>الفوائد:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>تحسين الهضم:</strong> يحتوي الأناناس على إنزيمات طبيعية تساعد في تسهيل عملية الهضم.</li>
+            <li class="benefits-list"><strong>تقوية المناعة:</strong> غني بفيتامين C من الأناناس ويدعم المناعة بفضل فطر الجانوديرما/ميلسليوم.</li>
+            <li class="benefits-list"><strong>منشط لوظائف الكبد:</strong> يساهم في دعم وتحسين وظائف الكبد.</li>
+            <li class="benefits-list"><strong>مضاد للأكسدة:</strong> يساعد في محاربة الجذور الحرة بفضل الفواكه والفطر.</li>
+        </ul>
+  
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20منتج مربع الاناناس من DXN 2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+                    <br> 
+                    <hr>
+                    <br>
+                
+                <img src="img/honey.jpg" width="100%" /> 
+                        <h4>عسل السدر من DXN</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لعسل السدر</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+    <div class="product-section">
+        
+        <p><strong>الوصف:</strong></p>
+        <p>عسل السدر هو عسل طبيعي نقي 100% يتم استخراجه من رحيق أزهار شجرة السدر (النبق). يتميز بلونه الداكن ورائحته المميزة وقوامه المتسق، ويعتبر من أجود أنواع العسل لقيمته الغذائية العالية.</p>
+        <p><strong>الفوائد الصحية الشاملة:</strong></p>
+        <ul>
+            <li><strong>مضاد حيوي ومطهر طبيعي:</strong> يمتلك خصائص قوية <span class="key-feature">مضادة للميكروبات والبكتيريا والفطريات</span>، مما يجعله مفيداً في علاج التهابات الجهاز التنفسي وتهدئة السعال.</li>
+            <li><strong>مقوي للمناعة:</strong> غني بمضادات الأكسدة التي تدعم وتقوي جهاز المناعة العام للجسم.</li>
+            <li><strong>دعم الجهاز الهضمي:</strong> يساعد في تحسين الهضم، وتخفيف مشاكل المعدة، ويعد مليناً طبيعياً، مما يجعله مفيداً لحالات الإمساك.</li>
+            <li><strong>معزز للطاقة:</strong> مصدر طبيعي وسريع للطاقة والنشاط لاحتوائه على أنواع مختلفة من السكريات الطبيعية (مثل الفركتوز والجلوكوز).</li>
+            <li><strong>مفيد للبشرة والجروح:</strong> يُستخدم موضعياً لتسريع التئام الجروح والحروق ويساهم في نضارة البشرة بفضل خصائصه المضادة للأكسدة والمطهرة.</li>
+            <li><strong>صحة عامة:</strong> يساهم في دعم صحة القلب والأوعية الدموية وتخفيف آلام الدورة الشهرية لدى النساء.</li>
+        </ul>
+    </div>     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20 عسل السدر،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+</div>
+                   <br> 
+                    <hr>
+                    <br>
+          
+          <div class="product-card">
+                         <img src="img/Coconut Oil.jpg" width="100%" /> 
+                        <h4>زيت جوز الهند العضوي (Coconut Oil)</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لزيت جوز الهند العضوي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+            <p>يتميز هذا الزيت بتركيبته الغنية التي تجعله متعدد الاستخدامات:</p>
+        <ul>
+            <li><span class="key-use">الأحماض الدهنية متوسطة السلسلة (MCTs):</span> وخاصة <span class="key-use">حمض اللوريك</span>، الذي يشكل حوالي 50% من تركيبته. هذا الحمض له خصائص قوية مضادة للبكتيريا والفيروسات والفطريات.</li>
+            <li><span class="key-use">فيتامين E:</span> مضاد أكسدة طبيعي يدعم صحة البشرة والشعر.</li>
+            <li>مضادات الأكسدة: التي تساعد في حماية الخلايا.</li>
+        </ul>
+
+        <h3>أبرز الاستخدامات والفوائد</h3>
+        <p>يُعد زيت جوز الهند العضوي كنزاً طبيعياً يمكن استخدامه داخلياً وخارجياً:</p>
+
+        <h4>1. للاستخدامات التجميلية والعناية الشخصية:</h4>
+        <ul>
+            <li><strong>ترطيب البشرة:</strong> يعمل كمرطب طبيعي فعال للبشرة والجسم، يعالج الجفاف ويُمتص بسرعة.</li>
+            <li><strong>العناية بالشعر:</strong> يوفر ترطيباً عميقاً للشعر، يقلل من تلفه، ويساعد في علاج مشاكل فروة الرأس مثل القشرة والالتهابات بفضل خصائصه المضادة للفطريات والبكتيريا.</li>
+            <li><strong>مزيل مكياج طبيعي:</strong> يزيل مكياج العيون والوجه بلطف وفعالية دون تهييج.</li>
+            <li><strong>مكافحة الشيخوخة:</strong> مضادات الأكسدة فيه تساعد في تقليل ظهور التجاعيد وتحسين نضارة البشرة.</li>
+            <li><strong>صحة الفم:</strong> يمكن استخدامه كـ "غسول للفم" (Oil Pulling) لإزالة البكتيريا وتحسين صحة اللثة.</li>
+        </ul>
+
+        <h4>2. للاستخدامات الصحية والغذائية:</h4>
+        <ul>
+            <li><span class="key-use">الطبخ والطهي:</span> يُعد بديلاً صحياً للزيوت النباتية التقليدية، ويتميز بالاستقرار عند درجات الحرارة العالية، مما يجعله مناسباً للقلي والخبز.</li>
+            <li><span class="key-use">دعم عملية التمثيل الغذائي (الأيض):</span> الأحماض الدهنية متوسطة السلسلة (MCTs) تُمتص وتُحوّل مباشرة إلى طاقة في الكبد، مما قد يساعد في زيادة حرق السعرات الحرارية ودعم جهود إنقاص الوزن.</li>
+            <li><strong>تعزيز المناعة:</strong> حمض اللوريك يتحول في الجسم إلى مركب "مونولورين" الذي له تأثيرات قوية في محاربة البكتيريا والفيروسات.</li>
+            <li><strong>تحسين صحة القلب:</strong> يساعد في رفع مستويات الكوليسترول الجيد (HDL) وتحسين توازن الدهون في الدم.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a 
+    href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20زيت جوز الهند العضوي2،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>  
+          <br>
+          
+                </div>
+            </section>
+            
+             <br>
+               <hr>
+               <hr>
+            <br>
+            
+            <section id="personal-care" class="product-section">
+           <h2>منتجات العناية الشخصية</h2>
+           <div class="product-grid">
+               <div class="product-card">
+                         <img src="img/GTP_ToothPaste150g.jpg" width="100%" />
+                        <h4>معجون أسنان جانوزي</h4>
+                <details>
+    <summary>عرض التفاصيل الكاملة لمعجون أسنان جانوزي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+       
+        <p>معجون أسنان خالٍ من الفلورايد، الألوان الصناعية، ومركب لوريل سلفات الصوديوم (SLS). يحتوي على <span class="key-ingredient">مستخلص الجانوديرما عالي الجودة</span>، جل طعام، ومنثول.</p>
+        <h3>الفوائد واستخداماته المتعددة:</h3>
+        <ul>
+            <li><strong>للفم والأسنان:</strong> تنظيف فعال، تقوية اللثة ومنع نزيفها، التخلص من الجراثيم ورائحة الفم الكريهة، وتبييض الأسنان بشكل طبيعي.</li>
+            <li><strong>للبشرة والجسم:</strong> يستخدم لعلاج حب الشباب والبثور، تخفيف آلام العضلات والمفاصل (بالدهن)، وتخفيف الحروق ولسعات الحشرات.</li>
+            <li><strong>للحلق والجهاز التنفسي:</strong> يمكن استخدامه للغرغرة لتخفيف مشاكل الحلق، أو إذابته في ماء ساخن لاستنشاق البخار وتخفيف أعراض البرد والسعال.</li>
+        </ul>
+    
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20معجون جانوزي،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+               <br>
+               <hr>
+               <br>
+               
+               
+           <div class="product-card">
+   <img src="img/OIL_MassageOil1.jpg" width="100%" />
+              <h4>زيت التدليك جانو</h4>
+                     <details>
+    <summary>عرض التفاصيل الكاملة لزيت التدليك جانو</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+
+        <p>زيت التدليك جانو هو زيت طبيعي مميز من DXN، صُمم ليكون أكثر من مجرد زيت مساج. يجمع هذا الزيت بين المكونات الطبيعية الفعالة، مما يجعله مناسباً لتدليك الجسم وتخفيف الآلام، بالإضافة إلى العناية بالبشرة والشعر. تركيبته خفيفة وغير دهنية، مما يسهل امتصاصه ولا يترك آثاراً لزجة.</p>
+
+        <strong>المكونات الأساسية<strong>
+        <p>يتميز زيت جانو بتركيبته الطبيعية الغنية بالمغذيات، وأهم مكوناته هي:</p>
+        <ul>
+            <li><span class="key-feature">زيت النخيل عالي الجودة:</span> يُعد قاعدة الزيت، وهو غني بمضادات الأكسدة مثل فيتامين (A) و (E)، مما يوفر ترطيباً عميقاً للبشرة.</li>
+            <li><span class="key-feature">مستخلص فطر الجانوديرما (الفطر الريشي):</span> يُضاف لتعزيز الخصائص المضادة للأكسدة والمضادة للالتهابات في الزيت، ويدعم تجديد الخلايا.</li>
+        </ul>
+
+        <h3>الفوائد الرئيسية والاستخدامات المتعددة</h3>
+        <p>بفضل تركيبته الفريدة، يُستخدم زيت جانو لأغراض علاجية وتجميلية واسعة:</p>
+
+        <h4>للعضلات والمفاصل (المساج والتخفيف من الآلام)</h4>
+        <ul>
+            <li><span class="key-feature">تخفيف الآلام:</span> يساعد في تخفيف آلام العضلات والمفاصل، وخاصة آلام الروماتيزم والتهابات المفاصل.</li>
+            <li><span class="key-feature">تقليل التقلصات:</span> فعال في التخفيف من التقلصات والتمزقات العضلية والشد العضلي، ويساعد على استرخاء العضلات.</li>
+            <li><strong>تحسين الدورة الدموية:</strong> التدليك بالزيت يساعد على تنشيط الدورة الدموية في المناطق المتأثرة.</li>
+        </ul>
+
+        <h4>للبشرة والعناية الجلدية</h4>
+        <ul>
+            <li><span class="key-feature">ترطيب وتغذية:</span> مرطب عميق يحمي البشرة من الجفاف، ويتركها ناعمة وصحية.</li>
+            <li><span class="key-feature">معالجة مشاكل الجلد:</span> يساعد في تهدئة الالتهابات الجلدية والحكة، كما يُستخدم للمساعدة في علاج بعض المشاكل الجلدية مثل الأكزيما وحب الشباب والدمامل.</li>
+            <li><strong>الإسعافات الأولية البسيطة:</strong> يمكن استخدامه للجروح الخفيفة أو الحروق لتهدئة الجلد وتسريع الشفاء.</li>
+        </ul>
+
+        <h4>للشعر وفروة الرأس</h4>
+        <ul>
+            <li><span class="key-feature">علاج القشرة:</span> مفيد لفروة الرأس المجهدة، ويساعد في التخلص من القشرة والحكة.</li>
+            <li><strong>تغذية وتقوية:</strong> يغذي فروة الرأس ويقوي بصيلات الشعر، مما يساهم في تقليل التقصف وزيادة ليونة الشعر ولمعانه.</li>
+        </ul>
+        <strong>نصيحة الاستخدام:</strong>
+        <p>يُنصح بوضع كمية مناسبة من زيت جانو على المنطقة المراد تدليكها وتدليكها بلطف حتى يتم امتصاصه. للحصول على أفضل النتائج في حالات الألم، يُقترح دمجه مع منتجات DXN الأخرى مثل كريم شجرة الشاي أو معجون جانوزي (حسب التوجيهات المحلية للمنتجات).</p>
+    
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20زيت جانو،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+          </div>
+                  <br>
+                  <hr>
+                  <br>
+ <div class="product-card">
+   <img src="img/SC073_Chubby_Baby_Oil_40ml.jpg" width="100%" />
+              <h4>زيت الأطفال تشابي (Chubby Baby Oil)</h4>
+                     <details>
+    <summary>عرض التفاصيل الكاملة لزيت الأطفال تشابي (Chubby Baby Oil)</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+       <p>زيت الأطفال تشابي (Chubby Baby Oil) من شركة DXN هو زيت مرطب للجسم مصمم خصيصاً لتلطيف البشرة الحساسة للأطفال وحمايتها. يتميز بتركيبة ناعمة وحريرية تجعله سهل الامتصاص وغير لزج، وهو مناسب للاستخدام اليومي.</p>
+
+        <h3>المكونات الأساسية</h3>
+        <p>يحتوي زيت تشابي على مزيج من المكونات الطبيعية والفعالة لترطيب وتغذية البشرة، ومن أبرزها:</p>
+        <ul>
+            <li><span class="key-feature">زيت عباد الشمس:</span> مرطب طبيعي غني بفيتامين E ومضادات الأكسدة.</li>
+            <li><span class="key-feature">الليسيثين (Lecithin):</span> يساعد في استحلاب الدهون ودعم ليونة البشرة.</li>
+            <li><span class="key-feature">حمض التوكوفيرول (Tocopherol Acid):</span> وهو شكل من أشكال فيتامين E، يعمل كمضاد للأكسدة.</li>
+            <li><span class="key-feature">جرثومة الحنطة فولغاري (Triticum Vulgare Germ):</span> للمساعدة في تغذية وتجديد خلايا البشرة.</li>
+        </ul>
+
+        <h3>أهم الاستخدامات والفوائد</h3>
+        <p>على الرغم من أنه مصمم للأطفال، إلا أن هذا الزيت يستخدم أيضاً للبالغين بفضل خصائصه المرطبة والمغذية. تشمل فوائده الرئيسية ما يلي:</p>
+
+        <h4>1. للأطفال:</h4>
+        <ul>
+            <li><strong>ترطيب عميق:</strong> يعمل على تلطيف بشرة الطفل وحمايتها من <span class="key-feature">الجفاف والتشقق والتقشر</span>.</li>
+            <li><strong>حماية ووقاية:</strong> يساعد في تكوين حاجز واقي على البشرة ضد العوامل الخارجية الضارة.</li>
+            <li><strong>تهدئة البشرة:</strong> يخفف من حساسية وتهيج الجلد، خاصة تلك الناتجة عن استخدام الحفاضات.</li>
+            <li><strong>ملمس ناعم:</strong> يترك بشرة الطفل ناعمة وطرية وحريرية الملمس طوال اليوم.</li>
+        </ul>
+
+        <h4>2. للكبار:</h4>
+        <ul>
+            <li><span class="key-feature">إزالة المكياج:</span> فعال جداً في إزالة آثار المكياج بلطف، بما في ذلك مكياج العين.</li>
+            <li><span class="key-feature">مضاد للأكسدة ومقاوم للتجاعيد:</span> يساعد في تغذية الجلد والتقليل من ظهور التجاعيد والهالات السوداء حول العين بفضل خصائصه المضادة للأكسدة.</li>
+            <li><strong>تنعيم المناطق الخشنة:</strong> يستخدم لتنعيم المرفقين والكعبين الجافين والخشنين.</li>
+            <li><strong>تقوية الشعر:</strong> يدعم صحة فروة الرأس ويقلل من تساقط الشعر.</li>
+        </ul>
+
+        <h3>طريقة الاستخدام</h3>
+        <p>يتم وضع كمية مناسبة من الزيت على البشرة وتدليكها بلطف وبحركات دائرية حتى يتم امتصاصه تماماً. يُفضل استخدامه بانتظام، خاصة بعد الاستحمام، للحصول على أفضل النتائج. كما يمكن استخدامه كغسول للوجه لإزالة المكياج.</p>         
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20زيت الأطفال تشابي (Chubby Baby Oil)،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+          </div>
+
+        
+   
+                  <br>
+                  <hr>
+                  <br>
+                  
+          
+              <div class="product-card">
+         <img src="img/FB_IMG_1752044854990.jpg" width="100%" />
+                        <h4>شامبو جانوزي DXN</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لشامبو جانوزي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+       
+        <p>شامبو جانوزي من شركة DXN هو شامبو طبيعي ولطيف، يتميز بتركيبته الغنية التي تجمع بين مستخلص فطر الجانوديرما (الفطر الريشي) وفيتامين B5. صُمم هذا الشامبو ليكون متوازن درجة الحموضة (pH Balanced) ولطيفاً على الشعر وفروة الرأس، مما يجعله مناسباً لجميع أنواع الشعر.</p>
+
+        <h3>المكونات الرئيسية</h3>
+        <p>التركيبة الأساسية لشامبو جانوزي تركز على التغذية والصحة بفضل المكونات النشطة الرئيسية:</p>
+        <ul>
+            <li><span class="key-feature">مستخلص فطر الجانوديرما (Ganoderma Extract):</span> غني بمضادات الأكسدة التي تعزز صحة فروة الرأس وتقوي بصيلات الشعر.</li>
+            <li><span class="key-feature">فيتامين B5 (بانثينول):</span> يساهم في تغذية الشعر، ترطيبه، وتعزيز لمعانه ومرونته، ويساعد في تقليل التساقط.</li>
+            <li><strong>خالٍ من المواد الكيميائية القاسية:</strong> (في غالبية إصداراته مثل "جانوزي بلس")، يتميز بأنه خالٍ من المواد مثل الألوان الصناعية والبارابين وبعض الكبريتات (SLES/SLS).</li>
+        </ul>
+
+        <h3>أبرز فوائد شامبو جانوزي للشعر وفروة الرأس</h3>
+        <p>يُعرف شامبو جانوزي بفوائده المتعددة التي تستهدف مشاكل الشعر الشائعة:</p>
+        <ul>
+            <li><span class="key-feature">تقوية ومنع التساقط:</span> يعمل على تغذية وتقوية الشعر من الجذور بفضل الجانوديرما وفيتامين B5، مما يقلل من تساقط الشعر.</li>
+            <li><span class="key-feature">مكافحة القشرة والحكة:</span> يساعد في تنظيف فروة الرأس بفعالية، ويزيل القشرة ويخفف من الحكة الناتجة عن البكتيريا أو الجفاف.</li>
+            <li><span class="key-feature">زيادة النعومة واللمعان:</span> يمنح الشعر ملمساً حريرياً وناعماً ولمعاناً صحياً طبيعياً.</li>
+            <li><strong>دعم نمو الشعر:</strong> يساعد في تحسين الدورة الدموية في فروة الرأس ويدعم النمو الصحي للشعر.</li>
+            <li><strong>الحفاظ على لون الشعر:</strong> يساعد في الحفاظ على لون الشعر الطبيعي (وخاصة الشعر المصبوغ في بعض الإصدارات) بفضل تركيبته اللطيفة.</li>
+        </ul>
+
+        <h3>طريقة الاستخدام</h3>
+        <p>يُستخدم شامبو جانوزي مثل أي شامبو آخر. يُبلل الشعر، وتوضع كمية مناسبة من الشامبو على فروة الرأس والشعر، ثم يُدلك بلطف. يُفضل تركه لعدة دقائق (بعض المصادر تقترح حتى 20 دقيقة) قبل شطفه جيداً بالماء للاستفادة القصوى من المكونات النشطة. مناسب للاستخدام اليومي.</p>
+   
+
+    
+        <strong>ملاحظة هامة:</strong>
+        <p>قد يلاحظ البعض تساقطاً خفيفاً في بداية الاستخدام، وهو ما يُفسره البعض بأنه مرحلة تطهير أو "تنظيف" للجذور الضعيفة. يُنصح بالاستمرار في استخدامه بانتظام مع منتجات العناية الأخرى من DXN للحصول على أفضل النتائج.</p>
+         
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20شامبو جانوزي،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+         </div>
+             
+          <br>
+            <hr>
+          <br>
+                    <div class="product-card">
+                        <img src="img/soap.jpg" width="100%" />
+                        <h4>صابون جانوزي DXN</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لصابون جانوزي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+          <p>صابونة طبيعية تجمع بين <span class="key-ingredient">مستخلص فطر الجانوديرما (الريشي)</span> و<span class="key-ingredient">زيت النخيل</span> الغني بفيتامين هـ ومضادات الأكسدة.</p>
+        <h3><strong>الفوائد:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>تنظيف عميق ولطيف:</strong> ينظف البشرة بفعالية ويزيل الأوساخ دون تجفيفها أو إزالة الزيوت الطبيعية.</li>
+            <li class="benefits-list"><strong>تأخير علامات الشيخوخة:</strong> مضاد للأكسدة، ينشط الدورة الدموية ويحسن مرونة البشرة.</li>
+            <li class="benefits-list"><strong>توحيد لون البشرة:</strong> يساعد على تفتيح المناطق الداكنة وتوحيد لون الجسم مع الاستمرار.</li>
+            <li class="benefits-list"><strong>مكافحة مشاكل الجلد:</strong> مفيد في تخفيف حب الشباب، الحساسية، وبعض التهابات الجلد.</li>
+        </ul>        
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20صابون جانوزي،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+           </div>  
+                 <br>
+                 <hr>
+                 <br>
+       <div class="product-card">
+              <img src="img/PC074_Oocha_Trans_Soap.jpg" width="100%" />
+                        <h4>صابون أوتشا ترانس (Oocha Trans Soap) من DXN</h4>
+                       <details>
+    <summary>عرض التفاصيل الكاملة لصابون أوتشا ترانس (Oocha Trans Soap) من DXN</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+       <p>صابون أوتشا ترانس (DXN Oocha Trans Soap) هو صابون عطري وشفاف للعناية بالبشرة، وهو أحد منتجات العناية الشخصية التي تقدمها شركة DXN. يتميز هذا الصابون بتركيبته التي تركز على مستخلص الشاي الأخضر والمكونات الطبيعية الأخرى لتقديم تنظيف لطيف وفعال.</p>
+
+        <h3>المكونات الرئيسية</h3>
+        <p>يتميز صابون أوتشا ترانس بمزيجه من المستخلصات الطبيعية المغذية للبشرة، وأهمها:</p>
+        <ul>
+            <li><span class="key-feature">مسحوق أوراق الكاميليا سينينسيس (الشاي الأخضر):</span> وهو المكون الأساسي الذي يُعرف بغناه بمضادات الأكسدة القوية (البوليفينول)، التي تحمي البشرة من الأضرار البيئية وتساعد على تجديد خلاياها.</li>
+            <li><span class="key-feature">مستخلص الجانوديرما (فطر الريشي):</span> يضاف لخصائصه في ترطيب وتغذية البشرة ومكافحة علامات الشيخوخة.</li>
+            <li><span class="key-feature">الزيوت الطبيعية:</span> للمساعدة في الحفاظ على رطوبة ونعومة البشرة دون التسبب في انسداد المسام.</li>
+        </ul>
+
+        <h3>الفوائد المتميزة للصابون</h3>
+        <p>بفضل تركيبته الغنية، يقدم صابون أوتشا ترانس فوائد متعددة للبشرة، تجعله مناسبًا للاستخدام اليومي للوجه والجسم:</p>
+
+        <h4>1. تنظيف لطيف وعميق</h4>
+        <ul>
+            <li><span class="key-feature">تنظيف دون تجريد:</span> ينظف البشرة بعمق ويزيل الأوساخ والزيوت والشوائب، لكنه مصمم للحفاظ على الزيوت الطبيعية للبشرة، مما يمنع جفافها.</li>
+            <li><strong>توازن البشرة:</strong> يساعد على موازنة درجة حموضة (pH) البشرة.</li>
+        </ul>
+
+        <h4>2. حماية ونضارة البشرة</h4>
+        <ul>
+            <li><span class="key-feature">مضاد للأكسدة:</span> محاربة الجذور الحرة وتقليل الضرر الناتج عن التعرض للشمس والتلوث بفضل خلاصة الشاي الأخضر.</li>
+            <li><strong>تعزيز الإشراق:</strong> يساهم في تجديد خلايا البشرة ويمنحها مظهرًا صحيًا ومشرقًا.</li>
+        </ul>
+
+        <h4>3. التلطيف والترطيب</h4>
+        <ul>
+            <li><span class="key-feature">مناسب للبشرة الحساسة:</span> تركيبته اللطيفة تجعله مناسباً لمعظم أنواع البشرة، بما في ذلك البشرة الحساسة.</li>
+            <li><strong>منع الجفاف:</strong> يحافظ على نعومة ومرونة البشرة ويمنع فقدان الرطوبة، بفضل مستخلص الجانوديرما والزيوت.</li>
+        </ul>
+
+        
+            <strong>طريقة الاستخدام:</strong>
+            <p>يُبلل الوجه أو الجسم، ثم يُفرك الصابون بين اليدين للحصول على رغوة. تُدلك الرغوة بلطف على البشرة ثم تُشطف جيداً بالماء. يُنصح باستخدامه يومياً كجزء من روتين العناية بالبشرة.</p>
+     
+       <p> <strong>لطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/message/WOUBAAUNUADOI1?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20صابون أوتشا ترانس (Oocha Trans Soap) من DXN،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+            <hr>
+          <br>            
+                 
+              <div class="product-card">
+       <img src="img/PC045_Zhimeko.jpg" width="100%" />
+                        <h4>دهان زيميكو (Zhimeko) من DXN</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لدهان زيميكو (Zhimeko) من DXN</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>     
+        <p>زيميكو (Zhimeko) هو دهان موضعي (مرهم/بلسم) من إنتاج شركة DXN. يتميز بتركيبته الطبيعية التي تجمع بين المكونات العشبية المعروفة بخصائصها المسكنة والمضادة للالتهابات. يُستخدم بشكل أساسي لتخفيف آلام العضلات والمفاصل وتقديم دعم موضعي للجلد.</p>
+
+        <h3>أبرز فوائد دهان زيميكو</h3>
+        <p>يُستخدم دهان زيميكو بشكل أساسي للاستخدام الخارجي، وتتعدد فوائده لتشمل ما يلي:</p>
+
+        <h4>1. لتخفيف الآلام العضلية والمفصلية</h4>
+        <ul>
+            <li><span class="key-feature">تسكين موضعي:</span> يُعد بديلاً طبيعياً للمراهم الكيميائية في تخفيف آلام العضلات والمفاصل.</li>
+            <li><strong>الروماتيزم والإنزلاق:</strong> يساعد في تخفيف الآلام المصاحبة لمشاكل المفاصل، الأعصاب، وحالات مثل الإنزلاق الغضروفي (عن طريق التدليك الموضعي).</li>
+            <li><strong>مضاد للالتهاب:</strong> يساعد في الحد من تورم المفاصل ويعمل كمضاد جيد للالتهابات بفضل زيت جوزة الطيب والجانوديرما.</li>
+        </ul>
+
+        <h4>2. للعناية بالجلد</h4>
+        <ul>
+            <li><span class="key-feature">تجديد الخلايا:</span> يساهم في تجديد وتنشيط خلايا الجلد لاحتوائه على الجرمانيوم العضوي.</li>
+            <li><strong>تهدئة أمراض الجلد:</strong> يُستخدم للمساعدة في تلطيف وتخفيف أعراض بعض الأمراض الجلدية مثل الصدفية والبهاق والحساسية (بفضل مادة الجانودريك).</li>
+            <li><strong>مضاد للجراثيم:</strong> يوفر خصائص مضادة للجراثيم بفضل شمع النحل الأبيض.</li>
+        </ul>
+
+        <h3>طريقة الاستخدام</h3>
+            <p>يُوضع كمية مناسبة من الدهان على المنطقة التي تعاني من الألم أو التورم.</br> يُدلك بلطف حتى يتم امتصاصه بشكل كامل.</p>
+       
+
+        
+            <h3>تحذيرات هامة:</h3>
+            
+                <p>للاستخدام الخارجي فقط.
+                <br>
+     يجب تجنب ملامسة الدهان للعينين <br>
+   يجب عدم استخدامه على الجروح المفتوحة أو 
+  الأسطح الجلدية المكشوفة أو الحروق.
+  </p>     
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20دهان زيميكو (Zhimeko) من DXN%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>                 
+                </div>
+            </section>
+            
+               <br>
+               <hr>
+               <hr>
+               <br>
+               
+            <section id="skincare" class="product-section">
+                <h2>منتجات العناية بالبشرة والتجميل</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="img/TTC-TeaTreeCream1.jpg" width="100%" />
+                        <h4>كريم شجرة الشاي (Tea Tree Cream)</h4>
+                       <details>
+    <summary>عرض التفاصيل الكاملة لكريم شجرة الشاي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>كريم طبيعي يتكون بشكل أساسي من <span class="key-ingredient">زيت شجرة الشاي الصافي</span>، وهو معروف بخصائصه القوية كمطهر ومضاد حيوي ومضاد للفطريات طبيعي.</p>
+        <h3><strong>الفوائد:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>علاج مشاكل البشرة:</strong> فعال في معالجة حب الشباب، البثور، والطفح الجلدي.</li>
+            <li class="benefits-list"><strong>مضاد للميكروبات والفطريات:</strong> يساعد في مكافحة الالتهابات الفطرية والجلدية.</li>
+            <li class="benefits-list"><strong>تهدئة الجلد:</strong> يعالج حروق الشمس، لسعات الحشرات، ويهدئ الالتهابات.</li>
+            <li class="benefits-list"><strong>متعدد الاستخدامات:</strong> يستخدم كمعقم للجروح الطفيفة ومخفف لآلام الصداع أو الشد العضلي (بالتدليك).</li>
+        </ul>
+     
+       <p> <strong>لطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/message/WOUBAAUNUADOI1?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20كريم شجرة الشاي،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+          <br>
+            <hr>
+          <br>            
+          <div class="product-card">
+                        <img src="img/POW_TalcumPowder.jpg" width="100%" />
+                        <h4>بودرة التالك (تالكوم) من DXN</h4>
+                       <details>
+    <summary>عرض التفاصيل الكاملة لكريم شجرة الشاي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h4>الوصف والمكونات:</h4>
+         <p>بودرة التالك (Talcum Powder) من DXN هي مسحوق جسم معطر مصمم لمنح شعور بالراحة والانتعاش والحماية من تهيجات الجلد الناتجة عن الحرارة والرطوبة.</p>
+        <p>تتميز هذه البودرة بتركيبتها الفريدة التي تدمج بين العنصر الأساسي للبودرة ومستخلص فطر الجانوديرما (Ganoderma)، مما يجعلها خيارًا مفضلاً للعناية اليومية بالبشرة لجميع الأعمار.</p>
+
+        <h3>المكونات الأساسية</h3>
+        <p>تشتمل بودرة التالك من DXN عادةً على المكونات التالية:</p>
+        <ul>
+            <li><span class="key-feature">التالك:</span> المادة الأساسية التي تمتص الرطوبة وتقلل الاحتكاك.</li>
+            <li><span class="key-feature">مستخلص فطر الجانوديرما (Ganoderma):</span> يُضاف لتعزيز الخصائص المضادة للأكسدة والمساعدة في تهدئة الجلد.</li>
+            <li><span class="key-feature">المنثول (Menthol) (أحياناً):</span> لإضفاء شعور بالبرودة والانتعاش.</li>
+            <li><span class="key-feature">عطر فاخر:</span> يمنح الجسم رائحة لطيفة تدوم طوال اليوم.</li>
+        </ul>
+
+        <h4>الفوائد والاستخدامات الرئيسية</h4>
+        <p>تتركز استخدامات وفوائد بودرة التالك من DXN في النقاط التالية:</p>
+
+        <h4>1. امتصاص الرطوبة وتخفيف الحرارة</h4>
+        <ul>
+            <li><span class="key-feature">الراحة والانتعاش:</span> تمنح شعوراً بالبرودة والراحة الفورية، وتخلص الجسم من الإحساس بالحرارة اللاذعة في الأجواء الرطبة.</li>
+            <li><strong>امتصاص الرطوبة:</strong> تعمل على امتصاص الرطوبة الزائدة والتعرق، مما يحافظ على جفاف ونعومة الجلد طوال اليوم.</li>
+        </ul>
+
+        <h4>2. حماية الجلد وتخفيف الالتهابات</h4>
+        <ul>
+            <li><span class="key-feature">مضادة للاحتكاك:</span> تخفف من احتكاك الجلد ببعضه، خاصة بين الفخذين أو تحت الإبطين، مما يمنع التسلخات والالتهابات الناتجة عن الاحتكاك والرطوبة.</li>
+            <li><strong>تهدئة الجلد:</strong> تساعد في تهدئة التهابات البشرة البسيطة والطفح الجلدي والحساسية الناتجة عن التعرق.</li>
+            <li><strong>مناسبة لبشرة الأطفال:</strong> تستخدم لحماية بشرة الأطفال الرقيقة من التهيج والتسلخات في منطقة الحفاضات.</li>
+        </ul>
+
+        <h4>3. الاستخدامات المتنوعة</h4>
+        <ul>
+            <li><strong>مزيل للعرق (بديل):</strong> يمكن استخدامها للمساعدة في امتصاص الرطوبة تحت الإبطين وإضفاء رائحة طيبة.</li>
+            <li><strong>للنظافة اليومية:</strong> تستخدم بعد الاستحمام أو في أي وقت لتعزيز الانتعاش والنعومة.</li>
+        </ul>
+
+       
+            <strong>ملاحظة:</strong>
+            <p>يُنصح بوضع كمية مناسبة على الجلد وتدليكها برفق. للحصول على أفضل النتائج في حالات التسلخات والالتهابات، قد يُنصح بخلطها مع كريم شجرة الشاي من DXN.</p>
+     
+       <p> <strong>لطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/message/WOUBAAUNUADOI1?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20بودرة التالك (تالكوم) من DXN،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+           <br>
+            <hr>
+          <br>                      
+                    
+                    <div class="product-card">
+                         <img src="img/allovera.jpg" width="100%" />
+                        <h4>مجموعة الألوفيرا للعناية بالبشرة (Aloe Vera Skin Care Set)</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لمجموعة الألوفيرا للعناية بالبشرة (Aloe Vera Skin Care Set)</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>مجموعة متكاملة للعناية اليومية بالبشرة تعتمد بشكل أساسي على <span class="key-ingredient">خلاصة نبتة الألوفيرا (الصبار)</span>. تشمل عادةً (جل منظف، تونر، كريم نهاري/ليلي، ولوشن للجسم) وهي مصممة لتنظيف البشرة، ترطيبها، وتجديد خلاياها.</p>
+        <h3><strong>الفوائد العامة للمجموعة:</strong></h3>
+        <ul>
+            <li class="benefits-list"><strong>ترطيب عميق:</strong> تغذي البشرة وتحافظ على توازن رطوبتها الطبيعية.</li>
+            <li class="benefits-list"><strong>تنظيف وتطهير:</strong> تطهر البشرة والمسام بلطف وتزيل الشوائب وبقايا المكياج.</li>
+            <li class="benefits-list"><strong>تجديد البشرة:</strong> تساعد في الحفاظ على بشرة شابة، نضرة، وأكثر مرونة.</li>
+            <li class="benefits-list"><strong>لطيفة على البشرة:</strong> مناسبة لمعظم أنواع البشرة، بما في ذلك البشرة الحساسة.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20مجموعة ألوفيرا ،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+     <br>
+     <hr>
+     <br>
+
+ <div class="product-card">
+                         <img src="img/Ganozhy toner.jpg" width="100%" />
+                        <h4>مجموعة جانوزي للتجميل (Ganozhi Skin Care Set)</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لمجموعة جانوزي للتجميل (Ganozhi Skin Care Set)</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+       <p>مجموعة للعناية بالبشرة تعتمد على <span class="key-ingredient">خلاصة فطر الجانوديرما (الريشي)</span>، بالإضافة إلى مكونات طبيعية أخرى مثل براعم الزان. تهدف إلى التنظيف العميق، التغذية، والمساعدة في الحفاظ على شباب البشرة.</p>
+        <p><strong>الفوائد العامة للمجموعة:</strong></p>
+        <ul>
+            <li class="benefits-list"><strong>مكافحة الشيخوخة:</strong> تغذي البشرة بالكولاجين الطبيعي والفيتامينات، وتساعد في تجديد الخلايا.</li>
+            <li class="benefits-list"><strong>تنظيف عميق وتوازن:</strong> تزيل خلايا الجلد الميتة وتحافظ على توازن الحموضة الطبيعي للبشرة (pH 5-6).</li>
+            <li class="benefits-list"><strong>ترطيب وحيوية:</strong> تمنح البشرة النعومة، الرطوبة، والمظهر المشرق.</li>
+            <li class="benefits-list"><strong>دعم المناعة الجلدية:</strong> تساعد خصائص الجانوديرما المضادة للأكسدة على حماية البشرة من الملوثات.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20مجموعة جانوزي للتجميل (Ganozhi Skin Care Set) ،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+                    
+               <br>
+               <hr>
+               <br>
+               
+             <div class="product-card">
+      <img src="img/pearlys.png" width="100%" />
+                        <h4>مجموعة أحمر الشفاه جانوزي</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لمجموعة أحمر الشفاه جانوزي</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>مجموعة أحمر الشفاه جانوزي من DXN هي  
+        <strong>مكون من عدة الوان/ </strong> أحمر لؤلؤي، وردي لؤلؤي، عنابي لؤلؤي، أحمر قاني، وردي مرجاني. وهي عبارة هن مستحضر تجميلي فاخر يهدف إلى منح الشفاه لوناً لامعاً وجذاباً مع توفير العناية والترطيب العميق. تتميز هذه المجموعة بتركيبة مرطبة وغنية بالمكونات الطبيعية التي تحافظ على صحة الشفاه ونعومتها.</p>
+
+        <h3>المكونات الرئيسية (التركيبة المرطبة)</h3>
+        <p>صُمم أحمر الشفاه جانوزي بتركيبة مغذية تركز على ترطيب وحماية الشفاه، ومن أهم مكوناتها:</p>
+        <ul>
+            <li><span class="key-feature">خلاصة الألوفيرا (الصبار):</span> تعمل على ترطيب الشفاه بعمق وتمنع جفافها وتشققها.</li>
+            <li><span class="key-feature">زبدة الشيا:</span> تغذي الشفاه وتجعل ملمسها ناعماً وحريرياً، وتوفر راحة تامة.</li>
+            <li><span class="key-feature">فيتامين E:</span> يعمل كمضاد للأكسدة لحماية الشفاه من العوامل البيئية الضارة ويساعد في تجديد الخلايا.</li>
+            <li><strong>خالٍ من الرصاص والمواد الكيميائية الضارة:</strong> يُعد خياراً آمناً للاستخدام اليومي.</li>
+        </ul>
+
+        <h3>الميزات والفوائد الجمالية والصحية</h3>
+        <p>لا يقتصر دور أحمر الشفاه جانوزي على التلوين، بل يقدم فوائد متعددة:</p>
+        <ul>
+            <li><strong>ترطيب فائق ومستمر:</strong> يحافظ على رطوبة الشفاه طوال اليوم ويحميها من الجفاف.</li>
+            <li><strong>لون لامع وجذاب:</strong> يوفر لوناً متلألئاً ومشرقاً مع لمعان طبيعي دون أن يبدو ثقيلاً أو مبالغاً فيه.</li>
+            <li><strong>تغذية وحماية:</strong> يعمل على تغذية الشفاه ويحميها من التشققات والمشكلات المرتبطة بأحمر الشفاه التقليدي.</li>
+            <li><strong>سهولة التطبيق:</strong> يتميز بقوام ناعم ينساب بسلاسة على الشفاه.</li>
+        </ul>
+
+        
+
+    
+        <strong>نصيحة:</strong>
+        <p>يُعد أحمر الشفاه جانوزي خياراً مثالياً لمن يبحث عن مستحضر تجميل صحي وآمن يدمج بين الأناقة والعناية، ويمنح الشفاه لوناً طبيعياً مع نعومة وترطيب يدوم طويلاً.</p>
+   
+     
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20مجموعة أحمر الشفاه للتجميل (Ganozhi Skin Care Set) ،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+            
+                    
+                </div>                  
+            </section>
+            
+            <br>
+               <hr>
+               <hr>
+            <br>
+            
+            <section id="home-care" class="product-section">
+                <h2>منتجات العناية المنزلية</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="img/FB_IMG_1761044045991.jpg" width="100%" />
+                        <h4>سائل غسيل الأطباق</h4>
+                         <details>
+    <summary>عرض التفاصيل الكاملة لسائل غسيل الاطباق</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>سائل تنظيف الأطباق من DXN هو منتج مصمم لتنظيف فعال للأواني والأطباق، مع التركيز على استخدام <span class="key-feature">تركيبة لطيفة</span> على البشرة.</p>
+        
+        <ul>
+            <li><strong>فعالية في إزالة الدهون:</strong> يمتلك قوة على تفكيك وإزالة الزيوت والشحوم والأوساخ العالقة على الأواني بفعالية.</li>
+            <li><strong>تركيبة لطيفة على اليدين:</strong> يتميز بأنه <span class="key-feature">مخفف ومركز</span>، وتركيبته مصممة لتكون أقل قسوة على جلد اليدين مقارنة ببعض المنظفات الكيميائية القوية.</li>
+            <li><strong>اقتصادي:</strong> يُستخدم بكميات قليلة لأنه سائل مركز، مما يجعله يدوم لفترة أطول.</li>
+            <li><strong>آمن على الأواني:</strong> يُعتقد أنه يحافظ على لمعان ونظافة الأواني دون ترك بقايا كيميائية ضارة.</li>
+        </ul>
+     
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20سائل غسيل الاطباق،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+                    </div>
+                    
+                    <br> 
+                    <hr>
+                    <br>
+                    
+                     <div class="product-card">
+                         <img src="img/DXN-Energy-Plus-Water-System.jpg" width="100%" />
+                        <h4>نظام فلتر المياه DXN (Pi Water System)</h4>
+                        <details>
+    <summary>عرض التفاصيل الكاملة لنظام فلتر المياه DXN (Pi Water System)</summary>
+    
+    <div style="padding: 10px; border-top: 1px solid #ddd; background-color: rgba(0, 51, 83, 0.25);">
+        <h3>الوصف والمكونات:</h3>
+        <p>هو نظام متكامل لتنقية ومعالجة المياه المنزلية، يهدف إلى تحويل مياه الصنبور العادية إلى مياه ذات جودة عالية تُعرف باسم <span class="key-ingredient">"Pi Water"</span> أو "الماء الحيوي النشط". يعتمد النظام على مراحل متعددة للترشيح والمعالجة لإزالة الشوائب والملوثات وتحسين الخصائص الفيزيائية للمياه.</p>
+        <p><strong>المكونات والمراحل الرئيسية (وفقاً للمعلومات الشائعة عن الفلتر):</strong></p>
+        <ul>
+            <li><strong>الترشيح الأولي:</strong> لإزالة الرواسب والمواد الصلبة العالقة (مثل الطين والرمل والصدأ).</li>
+            <li><strong>فلترة الكربون المنشط:</strong> لإزالة الكلور والمواد الكيميائية العضوية، وتحسين طعم ورائحة ولون الماء. يُستخدم كربون مستخلص من ثمار جوز الهند.</li>
+            <li><strong>معدن الفضة والطحالب الدياتومية:</strong> تستخدم لإزالة البكتيريا المسببة للأمراض كالتيفوئيد والكوليرا، حيث تعمل الفضة كعامل مانع لنمو البكتيريا.</li>
+            <li><strong>المرحلة المغناطيسية:</strong> تحتوي على مغناطيس قوي لـ <span class="key-ingredient">تنشيط الماء</span> عن طريق تكسير تكتلات جزيئات الماء إلى حجم أصغر (مياه سداسية)، مما يسهل على الجسم امتصاصها.</li>
+            <li><strong>مضادات الأكسدة وكريات الأيون:</strong> لتقليل نسبة الأكسدة في الماء وإضافة خصائص مضادة للأكسدة، مما يعزز القيمة الصحية للماء.</li>
+        </ul>
+        <p><strong>الفوائد العامة لنظام Pi Water:</strong></p>
+        <ul>
+            <li class="benefits-list"><strong>تنقية شاملة:</strong> يزيل الرواسب، الكلور، المواد الكيميائية العضوية، والبكتيريا.</li>
+            <li class="benefits-list"><strong>مياه حيوية ونشطة:</strong> يعمل على إعادة هيكلة جزيئات الماء لتصبح أصغر، مما يعزز الامتصاص والترطيب الخلوي.</li>
+            <li class="benefits-list"><strong>تحسين الصحة:</strong> يساعد على تحسين عملية الهضم، وتخفيف الإجهاد التأكسدي بفضل الخصائص المضادة للأكسدة المضافة.</li>
+            <li class="benefits-list"><strong>تحسين الطعم والرائحة:</strong> يزيل الروائح الكريهة ويجعل طعم الماء أكثر نقاءً وانتعاشاً.</li>
+            <li class="benefits-list"><strong>صحة أفضل:</strong> شرب مياه نقية وصحية يساهم في الوقاية من الأمراض المرتبطة بالملوثات والكلور.</li>
+        </ul>
+        
+       <p> <strong>للطلب المنتج الصحي ضع:</strong></p>
+            
+    
+    <label for="distributor-code" style="display: block; margin-: 5px;">عضويتك او عضوية الشخص الذي دلاك (اختياري):</label>
+    <input type="text" id="distributor-code" placeholder="أدخل كود الموزع...(اختياري)" style="padding: 8px; margin-bottom: 15px; width: 80%;">
+    
+    <a href="https://wa.me/249969592677?text=مرحباً،%20أرغب%20في%20طلب%20منتج%20نظام فلتر المياه DXN (Pi Water System)،%20وكود%20الموزع%20هو%20[أدخل%20الكود%20يدوياً]." 
+       target="_blank" 
+       class="whatsapp-order-btn">
+        أرسل طلب الشراء عبر واتساب
+    </a>
+</div>
+</details>
+            
+    </div>                   
+                </div>
+            </section>         
+           <br> 
+           
+            <section>   
+    <div class="alert-box">
+       <h4>⚠️ تنبيه هام حول مجموعة منتجاتنا ⚠️</h4>
+        
+        <p>نود أن نلفت انتباهكم إلى أن ما تم عرضه في هذا الموقع (موقع سفراء التميز والعطاء العالمي) من منتجات شركتنا الرائدة ما هو إلا جزء قليل وعينة بسيطة.</p>
+        
+        <p>في الحقيقة، فإن عائلة منتجات شركتنا (مثل DXN) أكبر بكثير، حيث يتجاوز عدد منتجاتنا الإجمالي 350  منتجاً مختلفاً ومتنوعاً.</p>
+        
+        <p>تغطي هذه المنتجات مجموعة واسعة من الاحتياجات، بدءاً من المكملات الغذائية، ومنتجات العناية الشخصية، والمشروبات، وغيرها الكثير. ندعوكم للتواصل معنا أو زيارة الكتالوج الرسمي للاطلاع على المجموعة الكاملة.</p>  
+    </div>
+</section>
+
+      <br>
+      <br>
+      
+      <section id="contact">    
+            
+    <div class="form-box">
+    
+    <p>للطلب والاستفسار، تواصل معنا عبر الواتساب:</p>
+    <a    href="https://wa.me/message/WOUBAAUNUADOI1"
+    class="whatsapp-btn"
+    target="_blank"
+    >
+        👈اضغط هنا للتواصل📲
+        </a> 
+        <br> 
+          <a href="index.html"> الرجوع إلى الصفحة الرئيسية</a>
+        </div> 
+  </section>
+          
+             </div>
+    </section>
+
+   <footer>
+      <p>جميع الحقوق محفوظة © 2025 | فريق سفراء التميُّز والعطاء العالمي</p>
+  </footer>
+</body>
+</html>
+ 
+  
+  
